@@ -1,0 +1,32 @@
+.hover-link
+  position relative
+
+  &::after
+    content ''
+    position absolute
+    top 100%
+    left 0
+    display block
+    width 100%
+    height 1em
+    background-color currentColor
+    transform scaleY(.075) scaleX(0)
+    transform-origin top left
+    transition transform .7s
+
+  .hover-link-trigger:hover &
+  &.hover-link_active
+  &:hover
+    &::after
+      transform scaleY(.075) scaleX(1)
+
+  &_large
+
+    &::after
+      transform scaleY(.05) scaleX(0)
+
+    .hover-link-trigger:hover &
+    &.hover-link_active
+    &:hover
+      &::after
+        transform scaleY(.05) scaleX(1)

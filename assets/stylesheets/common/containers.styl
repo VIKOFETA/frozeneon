@@ -1,0 +1,65 @@
+.wrapper-x
+  container()
+
+.wrapper
+  container()
+
+  &
+  &-y
+  &-top
+    padding-top rem($offsets.wrap.y)
+
+    +mobile()
+      padding-top rem($offsets.wrap.mobile.y)
+
+  // ------------------------------
+
+  &
+  &-y
+  &-bottom
+    padding-bottom rem($offsets.wrap.y)
+
+    +mobile()
+      padding-bottom rem($offsets.wrap.mobile.y)
+
+  // ------------------------------
+
+  &-double
+  &-double-y
+  &-double-top
+    padding-top rem($offsets.wrap.y * 2)
+
+    +mobile()
+      padding-top rem($offsets.wrap.mobile.y * 2)
+
+  // ------------------------------
+
+  &-double
+  &-double-y
+  &-double-bottom
+    padding-bottom rem($offsets.wrap.y * 2)
+
+    +mobile()
+      padding-bottom rem($offsets.wrap.mobile.y * 2)
+
+.ui
+  &-top
+    padding-top rem($ui.kk.y * 2 + 20px)
+
+    +mobile()
+      padding-top rem($ui.y * 2 + 40px)
+
+  &-max-top
+    padding-top rem($wrap.kk.y)
+
+    +mobile()
+      padding-top rem($ui.y * 2 + 40px)
+
+.container
+  container()
+
+for num in (7..15)
+  $value = num * 100
+
+  .mw-{$value}
+    max-width rem($value)
